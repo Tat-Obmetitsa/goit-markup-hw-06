@@ -71,6 +71,7 @@
 				</h1>
 				<button type="button" class="banner-button button" data-modal-open>Заказать услугу</button>
 			</section>
+			<!-- Модальное окно -->
 			<div class="backdrop is-hidden" data-modal>
 				<div class="modal">
 					<button type="button" class="modal-close" data-modal-close>
@@ -78,7 +79,39 @@
 							<use href="./images/sprite.svg#cross"></use>
 						</svg>
 					</button>
-					<button type="button" class="banner-button button">Отправить</button>
+					<form method="POST" class="form js-speaker-form">
+						<h3>Оставьте свои данные, мы вам перезвоним</h3>
+						<label class="form-field">
+							<span class="modal-label">Имя</span>
+							<input type="text" name="name" id="name" class="modal-input" />
+							<svg class="modal-icon" height="18" width="18">
+								<use href="./images/sprite.svg#name"></use>
+							</svg>
+						</label>
+						<label class="form-field">
+							<span class="modal-label">Телефон</span>
+							<input type="tel" name="tel" class="modal-input" />
+							<svg class="modal-icon" height="18" width="18">
+								<use href="./images/sprite.svg#tel"></use>
+							</svg>
+						</label>
+						<label class="form-field">
+							<span class="modal-label">Почта</span>
+							<input type="email" name="email" class="modal-input" />
+							<svg class="modal-icon" height="18" width="18">
+								<use href="./images/sprite.svg#mail"></use>
+							</svg>
+						</label>
+						<label class="form-field">
+							<span class="modal-label">Комментарий</span>
+							<textarea name="comment" placeholder="Введите текст" class="modal-input"></textarea>
+						</label>
+						<label class="checkbox-field">
+							<input type="checkbox" name="policy" value="agree" class="checkbox" />
+							<span>Соглашаюсь с рассылкой и принимаю Условия договора</span>
+						</label>
+						<button type="submit" class="banner-button button">Отправить</button>
+					</form>
 				</div>
 			</div>
 			<!-- Под баннером -->
@@ -532,7 +565,11 @@
 					<b class="footer-title">Подпишитесь на рассылку</b>
 					<ul class="email-list list">
 						<li class="email-item">
-							<textarea class="email-text">E-mail</textarea>
+							<form class="form">
+								<label class="form-field">
+									<input type="email" class="form-input" name="email" placeholder="E-mail" />
+								</label>
+							</form>
 						</li>
 						<li class="email-item">
 							<a href="https://www.twitter.com" class="button" target="_blank" rel="noopener noreferrer">
